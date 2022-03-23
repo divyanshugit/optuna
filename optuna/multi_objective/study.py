@@ -109,6 +109,15 @@ def create_study(
 
     Returns:
         A :class:`~optuna.multi_objective.study.MultiObjectiveStudy` object.
+    
+    Raises:
+        ValueError:
+            If the length of ``directions`` is not equal to the number of objectives.
+            
+        TypeError:
+            If the type of ``directions`` is not :class:`str`.
+
+
     """
 
     # TODO(ohta): Support pruner.
